@@ -7,6 +7,10 @@ TagManager:
   - turrent
   - wall
   - playerBullet
+  - player
+  - laser
+  - egerg
+  - floor
   layers:
   - Default
   - TransparentFX

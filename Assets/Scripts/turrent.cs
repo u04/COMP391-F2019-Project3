@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class turrent : MonoBehaviour
 {
+    public Transform firePoint;
+    public GameObject lazerPrefab;
+    public float speed = 20f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -13,9 +17,23 @@ public class turrent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKey("space"))
+
+        //if (Input.GetKey("x"))
         //{
-        //    Debug.Log("up arrow key is held down");
+            Shoot();
+
+        //}
+    }
+    void Shoot()
+    {
+        Instantiate(lazerPrefab, firePoint.position, firePoint.rotation);
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        //if (other.gameObject.tag == "Player" || other.gameObject.tag == "wall")
+        //{
+        //    Debug.Log("collision detected!");
+        //    Destroy(gameObject);
         //}
     }
 }
