@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 7848963528821910901}
   m_Layer: 0
   m_Name: player
-  m_TagString: Player
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,4 +173,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1147144639}
-  lazerPrefab: {fileID: 0}
+  lazerPrefab: {fileID: 6299137837595486615, guid: 6732692e49b064543955f8adffe2b674,
+    type: 3}

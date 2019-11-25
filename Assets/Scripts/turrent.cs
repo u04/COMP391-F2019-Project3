@@ -7,7 +7,9 @@ public class turrent : MonoBehaviour
     public Transform firePoint;
     public GameObject lazerPrefab;
     public float speed = 20f;
-    
+    public Transform target;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,9 @@ public class turrent : MonoBehaviour
 
         //if (Input.GetKey("x"))
         //{
-            Shoot();
+
+        //transform.LookAt(target); //it disappears
+        Shoot();
 
         //}
     }
