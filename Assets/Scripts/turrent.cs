@@ -19,6 +19,7 @@ public class turrent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.right = target.position - transform.position;
 
         //if (Input.GetKey("x"))
         //{
