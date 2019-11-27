@@ -166,3 +166,4 @@ MonoBehaviour:
   lazerPrefab: {fileID: 961976420458103497, guid: a8edf32fa7a290b419eabbd57ee7e89e,
     type: 3}
   speed: 20
+  target: {fileID: 0}
