@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject lazerPrefab;
+    public Text scoreText;
     public int score;
     // Start is called before the first frame update
     void Start()
@@ -52,6 +53,20 @@ public class Movement : MonoBehaviour
             transform.eulerAngles = Vector3.forward * -180;
         }
         transform.position = newPosition;
+
+        
+
+
     }
-    
+    int counter = 0;
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "laser")
+        {
+            counter++;
+            Debug.Log(counter);
+            scoreText.text = "Count: " + counter.ToString();
+        }
+    }
+
 }
