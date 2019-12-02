@@ -20,6 +20,14 @@ public class turrentLazer : MonoBehaviour
     {
 
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "player" || other.gameObject.tag == "wall")
+        {
+            Debug.Log("collision detected!");
+            Destroy(gameObject);
+        }
+    }
 
- 
+
 }
