@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,13 +10,15 @@ public class turrent : MonoBehaviour
 
     public Transform firePoint;
     public GameObject lazerPrefab;
-    public float speed = 20f;
+    public float speed = 2f;
     public Transform target;
 
 
     // Start is called before the first frame update
     void Start()
     {
+      
+
         
     }
 
@@ -24,24 +27,21 @@ public class turrent : MonoBehaviour
     {
         transform.right = target.position - transform.position;
 
-        //if (Input.GetKey("x"))
-        //{
-
-        //transform.LookAt(target); //it disappears
         Shoot();
 
-        //}
+
     }
     void Shoot()
     {
-        Instantiate(lazerPrefab, firePoint.position, firePoint.rotation);
+  
+            Instantiate(lazerPrefab, firePoint.position, firePoint.rotation);
+
+        
+      
     }
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        //if (other.gameObject.tag == "Player" || other.gameObject.tag == "wall")
-        //{
-        //    Debug.Log("collision detected!");
-        //    Destroy(gameObject);
-        //}
+
     }
 }
