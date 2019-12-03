@@ -64,7 +64,7 @@ public class Movement : MonoBehaviour
         if (other.gameObject.tag == "laser")
         {
             counter++;
-            Debug.Log(counter);
+            //Debug.Log(counter);
             scoreText.text = "Count: " + counter.ToString();
         }
     }

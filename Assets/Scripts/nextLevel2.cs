@@ -1,15 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Laser : MonoBehaviour
+public class nextLevel2 : MonoBehaviour
 {
-    public float speed = 20f;
-    public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.up * speed;
+        
     }
 
     // Update is called once per frame
@@ -18,11 +17,11 @@ public class Laser : MonoBehaviour
         
     }
     void OnTriggerEnter2D(Collider2D other)
-    { 
-        if (other.gameObject.tag == "turrent" || other.gameObject.tag == "wall")
+    {
+        if (other.gameObject.tag == "player")
         {
-            //Debug.Log("collision detected!");
-            Destroy(gameObject);
+            SceneManager.LoadScene("level3");
+            Debug.Log("entered level change area");
         }
     }
 }

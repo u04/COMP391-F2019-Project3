@@ -25,7 +25,7 @@ public class turrentLazer : MonoBehaviour
     {
         if (other.gameObject.tag == "player" || other.gameObject.tag == "wall")
         {
-            Debug.Log("collision detected!");
+            //Debug.Log("collision detected!");
             Destroy(gameObject);
         }
     }
