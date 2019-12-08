@@ -31,29 +31,24 @@ public class Movement : MonoBehaviour
     }
     public void Move()
     {
-        Vector2 newPosition = transform.position;
-        if (Input.GetAxis("Horizontal") > 0.0f)
+       
+        if (Input.GetKey("d"))
         {
-            newPosition += new Vector2(0.05f, 0.0f);
-            transform.eulerAngles = Vector3.forward * -90;
+            transform.Rotate(transform.forward * -5);
         }
-        if (Input.GetAxis("Horizontal") < 0.0f)
+        if (Input.GetKey("a"))
         {
-            newPosition -= new Vector2(0.05f, 0.0f);
-            transform.eulerAngles = Vector3.forward * 90;
+            transform.Rotate(transform.forward * 5);
         }
-        if (Input.GetAxis("Vertical") > 0.0f)
+        if (Input.GetKey("w"))
         {
-            newPosition += new Vector2(0.00f, 0.05f);
-            transform.eulerAngles = Vector3.forward * 0;
+            transform.position += transform.up * Time.deltaTime * 3f;
         }
-        if (Input.GetAxis("Vertical") < 0.0f)
+        if (Input.GetKey("s"))
         {
-            newPosition -= new Vector2(0.00f, 0.05f);
-            transform.eulerAngles = Vector3.forward * -180;
+            transform.position += transform.up * Time.deltaTime * -3f;
         }
-        transform.position = newPosition;
-
+    
         
 
 

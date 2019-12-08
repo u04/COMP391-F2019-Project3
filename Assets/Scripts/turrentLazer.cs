@@ -28,6 +28,7 @@ public class turrentLazer : MonoBehaviour
             //Debug.Log("collision detected!");
             Destroy(gameObject);
         }
+
     }
 
 
