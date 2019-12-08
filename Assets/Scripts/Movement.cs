@@ -54,13 +54,23 @@ public class Movement : MonoBehaviour
 
     }
     int counter = 0;
+    Vector3 temp = new Vector3(-0.18f, -4.55f, 0);
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "laser")
         {
             counter++;
             //Debug.Log(counter);
-            scoreText.text = "Count: " + counter.ToString();
+            if ((counter % 500) == 0)
+            {
+                Stats.life = Stats.life - 1;
+                //Destroy(this.gameObject);
+                this.gameObject.transform.position = temp;
+                counter = 0;
+            }
+                
+            scoreText.text = "Count: " + counter.ToString() + " Life: " + Stats.life;
+            
         }
     }
 

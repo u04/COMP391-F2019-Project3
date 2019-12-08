@@ -42,6 +42,10 @@ public class turrent : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.tag == "playerBullet")
+        {
+            Destroy(this.gameObject);
+        }
 
     }
 }

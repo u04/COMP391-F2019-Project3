@@ -25,4 +25,12 @@ public class Guard : MonoBehaviour
     {
         Instantiate(lazerPrefab, firePoint.position, firePoint.rotation);
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "playerBullet")
+        {
+            Destroy(this.gameObject);
+        }
+
+    }
 }
