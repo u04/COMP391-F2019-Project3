@@ -54,7 +54,7 @@ public class Movement : MonoBehaviour
 
     }
     int counter = 0;
-    Vector3 temp = new Vector3(-0.18f, -4.55f, 0);
+    Vector3 temp = new Vector3(-3.8f, -0.5f, 0);
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "laser")
